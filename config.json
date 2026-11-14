@@ -1,0 +1,21 @@
+{
+  "players": [
+    {
+      "account_id": 346873427,
+      "label": "Я"
+    },
+    {
+      "account_id": 1841942839,
+      "label": "Друг"
+    }
+  ],
+  "main_heroes_count": 8,
+  "history_days": 180,
+  "min_position_share": 0.15,
+  "extra_heroes": {
+    "346873427": [],
+    "1841942839": []
+  },
+  "analyze_matches": 20,
+  "parse_requests_per_run": 10
+}

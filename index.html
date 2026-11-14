@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dota Hub</title>
+  <script>
+    // тема до отрисовки, чтобы не мигало
+    try { const t = localStorage.getItem("dh.theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#/">
+      <span class="logo-mark">◆</span><span>Dota<b>Hub</b></span>
+    </a>
+    <nav class="nav">
+      <a href="#/" data-nav="home">Игроки</a>
+      <a href="#/heroes" data-nav="heroes">Все герои</a>
+      <a href="#/draft" data-nav="draft">Драфт</a>
+    </nav>
+    <div class="search">
+      <input id="q" type="search" autocomplete="off"
+             placeholder="Ник, ID, ссылка Steam или герой…  ( / )">
+      <div id="suggest" class="suggest" hidden></div>
+    </div>
+    <div id="meta" class="meta"></div>
+    <button id="theme" class="icon-btn" title="Светлая / тёмная тема" aria-label="Сменить тему">◐</button>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="foot">
+    Данные: <a href="https://dota2protracker.com" target="_blank" rel="noopener">dota2protracker</a> ·
+    <a href="https://www.opendota.com" target="_blank" rel="noopener">OpenDota</a> ·
+    обновить: <code>python update.py</code>
+  </footer>
+
+  <script src="data/data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
